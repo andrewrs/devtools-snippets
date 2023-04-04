@@ -4,6 +4,23 @@
 
 (function() {
 
+     function listAttributes(formel) {
+       const paragraph = document.getElementById("paragraph");
+       const result = document.getElementById("result");
+
+       // First, let's verify that the paragraph has some attributes
+       if (formel.hasAttributes()) {
+         let output = "Attributes of first paragraph:\n";
+         for (const attr of formel.attributes) {
+           output += `${attr.name} -> ${attr.value}\n`;
+         }
+         return = output;
+       } else {
+         return = "No attributes to show";
+       }
+    }
+  
+  
   var forms = document.querySelectorAll("form");
 
   for (var i = 0, len = forms.length; i < len; i++) {
@@ -27,4 +44,7 @@
     console.table(tab);
     console.groupEnd();
   }
+  
+
+  
 })();
